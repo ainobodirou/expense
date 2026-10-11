@@ -7466,7 +7466,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "message": "У пакета \"Microsoft.OpenApi\" 2.0.0 есть известная уязвимость https://github.com/advisories/GHSA-v5pm-xwqc-g5wc (уровень серьезности: высокий)",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"
@@ -7476,7 +7476,7 @@
       "code": "NU1901",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'NuGet.Packaging' 6.12.1 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "message": "У пакета \"NuGet.Packaging\" 6.12.1 есть известная уязвимость https://github.com/advisories/GHSA-g4vj-cjjj-v7hg (уровень серьезности: низкий)",
       "libraryId": "NuGet.Packaging",
       "targetGraphs": [
         "net10.0"
@@ -7486,7 +7486,7 @@
       "code": "NU1901",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'NuGet.Protocol' 6.12.1 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "message": "У пакета \"NuGet.Protocol\" 6.12.1 есть известная уязвимость https://github.com/advisories/GHSA-g4vj-cjjj-v7hg (уровень серьезности: низкий)",
       "libraryId": "NuGet.Protocol",
       "targetGraphs": [
         "net10.0"

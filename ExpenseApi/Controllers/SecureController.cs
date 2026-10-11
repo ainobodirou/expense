@@ -88,7 +88,7 @@ public class AuthController: ControllerBase
         return Unauthorized();
     }
 
-    
+
     [HttpPost("refresh-token")]
     public async Task<IActionResult> RefreshToken([FromBody] TokenRequestVM payload)
     {
@@ -167,7 +167,7 @@ public class AuthController: ControllerBase
         var token = new JwtSecurityToken(
             issuer: _configuration["JWT:Issuer"],
             audience: _configuration["JWT:Audience"],
-            expires: DateTime.UtcNow.AddMinutes(1), // typical time 5-10 mins
+            expires: DateTime.UtcNow.AddMinutes(5), // typical time 5-10 mins
             claims: authClaims,
             signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
         );

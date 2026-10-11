@@ -294,3 +294,4 @@ C:\Users\denik\Desktop\expense\ExpenseApi\bin\Debug\net10.0\Npgsql.EntityFramewo
 C:\Users\denik\Desktop\expense\ExpenseApi\bin\Debug\net10.0\appsettings.json
 C:\Users\denik\Desktop\expense\ExpenseApi\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\denik\Desktop\expense\ExpenseApi\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\denik\Desktop\expense\ExpeNseAPi\obj\Debug\net10.0\ExpenseAPi.sourcelink.json

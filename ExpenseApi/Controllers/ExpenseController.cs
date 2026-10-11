@@ -27,6 +27,7 @@ public class ExpensesController: ControllerBase
     }
 
     //GET: api/Expenses/5
+    [HttpGet("{id}")]
     public async Task<ActionResult<ExpenseItemDTO>> GetExpenseItem(long id)
     {
         var expenseItem = await _context.ExpenseItems.FindAsync(id);
@@ -38,7 +39,7 @@ public class ExpensesController: ControllerBase
         return ItemToDTO(expenseItem);
     }
     // PUT api/Expenses/5
-    // how do we protect from overposint attacks? 
+    // how do we protect from overposting attacks? 
     [HttpPut("{id}")]
     public async Task<IActionResult> PutExpenseItem(long id, ExpenseItemDTO expenseDTO)
     {

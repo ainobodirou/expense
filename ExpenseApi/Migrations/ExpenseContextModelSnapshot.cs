@@ -35,7 +35,6 @@ namespace ExpenseAPi.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Custom")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Email")
