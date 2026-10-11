@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ExpenseApi.Models;
+using Microsoft.AspNetCore.Authorization;
 namespace ExpensesApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 
 public class ExpensesController: ControllerBase
 {
@@ -64,6 +66,7 @@ public class ExpensesController: ControllerBase
         return NoContent();
     }
 
+
     [HttpPost]
     public async Task<ActionResult<ExpenseItemDTO>> PostExpense(ExpenseItemDTO expenseDTO)
     {
@@ -86,6 +89,7 @@ public class ExpensesController: ControllerBase
     }
 
     //DELETE: api/Expenses/5
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteTodoItem(long id)
     {
