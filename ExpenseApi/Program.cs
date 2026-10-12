@@ -76,5 +76,6 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+AppDbInitializer.SeedRoles(app).Wait();
 
 app.Run();

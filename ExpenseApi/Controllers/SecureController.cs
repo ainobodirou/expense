@@ -65,6 +65,17 @@ public class AuthController: ControllerBase
             return BadRequest("User was not created");
         }
 
+        switch (payload.Role)
+        {
+            case "Admin":
+                await _userManager.AddToRoleAsync(newUser, UserRoles.Admin);
+                break;
+
+            default:
+                await _userManager.AddToRoleAsync(newUser, UserRoles.User);
+                break;
+        }
+
         return Created(nameof(Register), "User created"); //?
 
         
@@ -161,6 +172,14 @@ public class AuthController: ControllerBase
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
 
         };
+
+        //Add user Roles
+
+        var userRoles = await _userManager.GetRolesAsync(user);
+        foreach (var userRole in userRoles)
+        {
+            authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+        }
 
         var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:SigningKey"])); //?
 
